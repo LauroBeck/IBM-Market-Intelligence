@@ -70,21 +70,40 @@ def compute_risk_score(returns):
 
 
 # ============================================
-# 3️⃣ SOVEREIGN MONTE CARLO ENGINE
+# 3️⃣ GLOBAL LIQUIDITY INDEX (NEW)
 # ============================================
 
-def sovereign_model(risk_score, returns, scenario="baseline"):
+def compute_global_liquidity_index(returns):
+
+    weights = {
+        "MSCI_Asia": 0.25,
+        "SP500": 0.25,
+        "NASDAQ": 0.20,
+        "Gold": 0.15,
+        "Copper": 0.15
+    }
+
+    latest = returns.iloc[-5:].mean()
+
+    gli = sum(latest[k] * w for k, w in weights.items())
+
+    return gli
+
+
+# ============================================
+# 4️⃣ SOVEREIGN MONTE CARLO ENGINE
+# ============================================
+
+def sovereign_model(risk_score, returns, gli, scenario="baseline"):
 
     simulations = 10000
     maturity = 5
 
-    # Initial Conditions
     debt_ratio_start = 0.85
     base_gdp = 0.04
     short_rate = 0.04
     long_rate = 0.05
 
-    # Risk regime GDP adjustment
     adjustment_map = {
         0: -0.02,
         1: -0.01,
@@ -101,7 +120,6 @@ def sovereign_model(risk_score, returns, scenario="baseline"):
     short_vol = 0.015
     long_vol = 0.02
 
-    # Scenario Overrides
     if scenario == "hard_landing":
         gdp_drift -= 0.03
         gdp_vol *= 1.8
@@ -117,7 +135,6 @@ def sovereign_model(risk_score, returns, scenario="baseline"):
         gdp_drift += 0.02
         copper_beta = 0.4
 
-    # Correlation Matrix (GDP ↔ short ↔ long)
     corr = np.array([
         [1.0, -0.4, -0.3],
         [-0.4, 1.0, 0.7],
@@ -126,7 +143,7 @@ def sovereign_model(risk_score, returns, scenario="baseline"):
 
     L = np.linalg.cholesky(corr)
 
-    default_count = 0
+    default_events = 0
     debt_paths = []
 
     for _ in range(simulations):
@@ -137,15 +154,15 @@ def sovereign_model(risk_score, returns, scenario="baseline"):
 
         path = []
 
-        for t in range(maturity):
+        for _ in range(maturity):
 
             shocks = L @ np.random.normal(size=3)
             copper_shock = copper_vol * np.random.normal()
 
             gdp_growth = (
-                gdp_drift
-                + gdp_vol * shocks[0]
-                + copper_beta * copper_shock
+                gdp_drift +
+                gdp_vol * shocks[0] +
+                copper_beta * copper_shock
             )
 
             s_rate += short_vol * shocks[1]
@@ -160,20 +177,29 @@ def sovereign_model(risk_score, returns, scenario="baseline"):
         debt_paths.append(path)
 
         if debt_ratio > 1.2:
-            default_count += 1
+            default_events += 1
 
-    pd_5y = default_count / simulations
+    base_default_prob = default_events / simulations
 
-    # CDS Pricing
+    # ======================================
+    # LIQUIDITY ADJUSTMENT (GLI)
+    # ======================================
+
+    liquidity_adjustment = -0.5 * gli
+
+    adjusted_default_prob = base_default_prob + liquidity_adjustment
+    adjusted_default_prob = max(0, min(1, adjusted_default_prob))
+
     recovery = 0.4
     duration = 5
-    cds_spread = (pd_5y * (1 - recovery)) / duration
 
-    return pd_5y, cds_spread, np.array(debt_paths)
+    cds_spread = (adjusted_default_prob * (1 - recovery)) / duration
+
+    return adjusted_default_prob, cds_spread, np.array(debt_paths)
 
 
 # ============================================
-# 4️⃣ INTERACTIVE DASHBOARD
+# 5️⃣ DASHBOARD
 # ============================================
 
 def dashboard(results):
@@ -186,7 +212,7 @@ def dashboard(results):
 
         fig.add_trace(go.Scatter(
             y=mean_path,
-            mode='lines',
+            mode="lines",
             name=f"{scenario} (CDS {round(data['cds']*10000,1)} bps)"
         ))
 
@@ -197,23 +223,27 @@ def dashboard(results):
         template="plotly_dark"
     )
 
-   fig.write_image("sovereign_dashboard.png", width=1200, height=800)
+    fig.write_image("sovereign_dashboard.png", width=1200, height=800)
 
-   print("\nDashboard saved as sovereign_dashboard.png")
+    print("\nDashboard saved as sovereign_dashboard.png")
 
 
 # ============================================
-# 5️⃣ MAIN TERMINAL EXECUTION
+# 6️⃣ MAIN TERMINAL
 # ============================================
 
 if __name__ == "__main__":
 
     print("\nLoading Market Data...")
+
     prices, returns = load_market_data()
 
     risk_score = compute_risk_score(returns)
 
+    gli = compute_global_liquidity_index(returns)
+
     print("Global Risk Score:", risk_score, "/ 3")
+    print("Global Liquidity Index:", round(gli, 4))
 
     scenarios = [
         "baseline",
@@ -229,6 +259,7 @@ if __name__ == "__main__":
         pd_5y, cds, debt_paths = sovereign_model(
             risk_score,
             returns,
+            gli,
             scenario=s
         )
 
