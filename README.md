@@ -6,10 +6,10 @@ A professional-grade financial visualization suite for the 2026 market environme
 ## 📊 Strategic Dashboards
 
 ### Sovereign Stress Projection
-![Sovereign Stress](https://raw.githubusercontent.com/LauroBeck/IBM-Market-Intelligence/main/reports/exports/sovereign_stress_projection_v2.png)
+![Sovereign Stress](./reports/exports/sovereign_stress_projection_v2.png)
 
 ### Intraday Alpha Scorecard (Auto-Generated)
-![Alpha Scorecard](https://raw.githubusercontent.com/LauroBeck/IBM-Market-Intelligence/main/reports/exports/alpha_scorecard_v1.png)
+![Alpha Scorecard](./reports/exports/alpha_scorecard_v1.png)
 
 ### 🚀 Pro Features
 * **Institutional Alpha Monitor**: Real-time edge detection for TSLA, NDX, and IBM.
