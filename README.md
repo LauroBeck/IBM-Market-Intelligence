@@ -1,22 +1,34 @@
-# IBM Market Intelligence & Quantum Alpha Strategy
-## Institutional-Grade Portfolio Analysis | 2026
+# IBM & Bloomberg Market Intelligence Dashboard
+`pro version` `v1.0.0-pro` `html 99.7%`
 
-This repository houses a modular suite of Python tools designed for real-time market state analysis, focusing on the intersection of sovereign risk, FX correlations, and equity momentum.
+A professional-grade financial visualization suite.
 
-### 🏗 System Architecture
-The system is divided into two primary operational series:
+## 📊 Dashboard Preview
+![Dashboard Preview](https://raw.githubusercontent.com/LauroBeck/IBM-Market-Intelligence/main/reports/exports/sovereign_stress_projection_v2.png)
 
-#### 1. The Institutional Series
-* **Omni_Alpha_Monitor.py**: Detects alpha edges across multi-asset classes.
-* **Sovereign_Equities_Bridge.py**: Maps FX volatility (e.g., USD-INR) against tech equity performance.
-* **Market_Pulse_Oracle.py**: Identifies idiosyncratic breakouts (e.g., ORCL +8.91% divergence).
-
-#### 2. The Mission Series
-* **Tactical_Market_Alignment.py**: Manages portfolio weight rotation based on VIX thresholds.
-* **Mission_State_Snapshot.py**: Provides point-in-time logs of the 6-Qubit Quantum environment.
-
-### 📊 Methodology
-The analysis utilizes a **6-Qubit Quantum Alpha Engine** to simulate market inflections, specifically monitoring the **0.22 VIX Shock Inflection** as a trigger for defensive rotation into IBM, JPM, and BNY.
+### 🚀 Pro Features
+* **IBM Evolution**: Tracking IBM's recovery from its 22-week low with Bollinger Bands.
+* **Global Indices**: Real-time tracking of S&P 500, Nasdaq, Dow Jones, and VIX.
+* **YTD Scorecard**: Automated performance labels calculated for the 2026 trading year.
+* **Multi-Format Export**: Generates high-res static PNGs and interactive HTML reports.
 
 ---
-*Last Automated Sync: $(date '+%Y-%m-%d %H:%M')*
+
+## 🏛 Institutional Series (Automated Alpha Architecture)
+> **Note**: These components run autonomously via the `Mission_Control_Center.py` to provide intraday desk-analyst signals.
+
+<details>
+<summary><b>Click to expand Institutional Logic & Scripts</b></summary>
+
+### 🛠 Operational Series
+* **Omni_Alpha_Monitor.py**: Multi-asset edge detection (Current Focus: TSLA/NDX).
+* **Market_Pulse_Oracle.py**: Specific idiosyncratic breakout tracking (e.g., ORCL +8.91%).
+* **Sovereign_Equities_Bridge.py**: FX/Equity correlation mapping (USD-INR vs Tech).
+* **Tactical_Market_Alignment.py**: Defensive rotation trigger logic based on VIX thresholds.
+
+### 🤖 Automation Workflow
+The system performs an **Automated Sync** every hour, appending real-time terminal data to the `MISSION_LOG.md` and syncing directly with this repository.
+</details>
+
+---
+*Last Mission Sync: $(date '+%Y-%m-%d %H:%M') | Architecture: 6-Qubit Quantum Alpha*
