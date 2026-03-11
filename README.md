@@ -25,3 +25,17 @@ The official stable version is available under the **Releases** tab.
 
 ## 📊 Latest Insight (March 4, 2026)
 Markets are currently in a rebound phase with the Nasdaq leading gains (+1.29%) and the VIX cooling to 21.15.
+# Bloomberg-Markets-Inflection (2026)
+
+Quantitative finance repository focused on sovereign risk modeling and 6-qubit quantum portfolio optimization.
+
+## 📁 Project Structure
+- **/core**: `Sovereign_Macro_Stress_Simulator.py` - Debt & FX shock modeling.
+- **/quantum**: `Quantum_Green_Optimizer.py` - 6-Qubit alignment logic.
+- **/analytics**: Dashboard and scorecard generation scripts.
+- **/reports**: Daily mission logs and visual exports.
+
+## 🚀 Current Strategy
+- **Status**: Green
+- **Stability Threshold**: 0.22 VIX Shock
+- **Core Assets**: NDX, IBM, JPM, TSLA, JEPQ, BNY

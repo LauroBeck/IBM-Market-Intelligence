@@ -1,7 +1,11 @@
+# Environments
 venv/
+ai_env/
 qenv/
 __pycache__/
-*.py[cod]
-.env
+*.pyc
+
+# Data & Exports
+exports/
+reports/exports/*.png
 .DS_Store
-quantum_project/
