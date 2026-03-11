@@ -24,13 +24,13 @@ A professional-grade financial visualization suite for the 2026 market environme
 <summary><b>Click to expand System Logic & Script Documentation</b></summary>
 
 ### 🛠 Operational Series
-* **Omni_Alpha_Monitor.py**: Detects alpha across multi-asset classes.
-* **Market_Pulse_Oracle.py**: Monitors idiosyncratic breakout signals.
-* **Sovereign_Equities_Bridge.py**: Maps FX/Equity correlation (USD-INR vs Tech).
+* **Omni_Alpha_Monitor.py**: Multi-asset edge detection.
+* **Market_Pulse_Oracle.py**: Specific idiosyncratic breakout tracking.
+* **Sovereign_Equities_Bridge.py**: FX/Equity correlation mapping.
 * **Generate_Market_Scorecard.py**: Updates the visual dashboard hourly.
 
 ### 🤖 Automation Workflow
-System updates are handled by `Auto_Mission_Sync.sh`, ensuring that the `MISSION_LOG.md` and visual assets are always synchronized with terminal snapshots.
+System updates are handled by `Auto_Mission_Sync.sh`, ensuring that the `MISSION_LOG.md` and visual assets are always synchronized.
 </details>
 
 ---
