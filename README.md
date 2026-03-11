@@ -1,9 +1,14 @@
 # IBM & Bloomberg Market Intelligence Dashboard
-`pro version` `v1.0.0-pro` `html 99.7%`
+
+![Bloomberg](https://img.shields.io/badge/Bloomberg-000000?style=for-the-badge&logo=bloomberg&logoColor=white)
+![IBM](https://img.shields.io/badge/IBM-052FAD?style=for-the-badge&logo=ibm&logoColor=white)
+![NASDAQ](https://img.shields.io/badge/NASDAQ-000000?style=for-the-badge&logo=nasdaq&logoColor=white)
+![Pro Version](https://img.shields.io/badge/PRO_VERSION-v1.0.0--pro-107C10?style=for-the-badge)
+![Market State](https://img.shields.io/badge/STATE-STABLE-green?style=for-the-badge)
 
 A professional-grade financial visualization suite for the 2026 market environment.
 
-## 📊 Dashboard Preview
+## 📊 Strategic Dashboards
 
 ### IBM vs Bloomberg Evolution Scorecard
 ![Evolution Scorecard](./reports/exports/multi_index_dashboard.png)
