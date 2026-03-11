@@ -13,7 +13,7 @@ A professional-grade financial visualization suite for the 2026 market environme
 
 ### 🚀 Pro Features
 * **Institutional Alpha Monitor**: Real-time edge detection for TSLA, NDX, and IBM.
-* **Sovereign Bridge**: Correlating USD-INR volatility with tech-sector revenue exposure.
+* **Sovereign Bridge**: Mapping USD-INR volatility against tech sector exposure.
 * **Idiosyncratic Alerts**: Automated tracking of breakouts like ORCL (+8.91%).
 * **6-Qubit Simulation**: Portfolio alignment verified against quantum market models.
 
@@ -24,9 +24,9 @@ A professional-grade financial visualization suite for the 2026 market environme
 <summary><b>Click to expand System Logic & Script Documentation</b></summary>
 
 ### 🛠 Operational Series
-* **Omni_Alpha_Monitor.py**: Multi-asset edge detection.
-* **Market_Pulse_Oracle.py**: Specific idiosyncratic breakout tracking.
-* **Sovereign_Equities_Bridge.py**: FX/Equity correlation mapping.
+* **Omni_Alpha_Monitor.py**: Detects alpha across multi-asset classes.
+* **Market_Pulse_Oracle.py**: Monitors idiosyncratic breakout signals.
+* **Sovereign_Equities_Bridge.py**: Maps FX/Equity correlation (USD-INR vs Tech).
 * **Generate_Market_Scorecard.py**: Updates the visual dashboard hourly.
 
 ### 🤖 Automation Workflow
