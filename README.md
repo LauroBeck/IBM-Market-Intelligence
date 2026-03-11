@@ -3,19 +3,19 @@
 
 A professional-grade financial visualization suite for the 2026 market environment.
 
-## 📊 Strategic Dashboards
+## 📊 Dashboard Preview
 
-### Sovereign Stress Projection
+### IBM vs Bloomberg Evolution Scorecard
+![Evolution Scorecard](./reports/exports/multi_index_dashboard.png)
+
+### Sovereign Stress Projection (6-Qubit Simulation)
 ![Sovereign Stress](./reports/exports/sovereign_stress_projection_v2.png)
 
-### Intraday Alpha Scorecard (Auto-Generated)
-![Alpha Scorecard](./reports/exports/alpha_scorecard_v1.png)
-
 ### 🚀 Pro Features
-* **Institutional Alpha Monitor**: Real-time edge detection for TSLA, NDX, and IBM.
-* **Sovereign Bridge**: Mapping USD-INR volatility against tech sector exposure.
-* **Idiosyncratic Alerts**: Automated tracking of breakouts like ORCL (+8.91%).
-* **6-Qubit Simulation**: Portfolio alignment verified against quantum market models.
+* **IBM Evolution**: Tracking recovery from 22-week lows with institutional Bollinger analysis.
+* **Global Indices**: Automated tracking of S&P 500, Nasdaq, Dow Jones, and VIX.
+* **YTD Scorecard**: Performance labels calculated for the 2026 fiscal year.
+* **Multi-Format Export**: Automated generation of high-res PNG and Markdown logs.
 
 ---
 
@@ -24,15 +24,14 @@ A professional-grade financial visualization suite for the 2026 market environme
 <summary><b>Click to expand System Logic & Script Documentation</b></summary>
 
 ### 🛠 Operational Series
-* **Omni_Alpha_Monitor.py**: Detects alpha across multi-asset classes.
-* **Market_Pulse_Oracle.py**: Monitors idiosyncratic breakout signals.
-* **Sovereign_Equities_Bridge.py**: Maps FX/Equity correlation (USD-INR vs Tech).
+* **Generate_Pro_Dashboards.py**: Recalculates time-series evolution and stress curves.
+* **Omni_Alpha_Monitor.py**: Multi-asset edge detection (Current Focus: TSLA/NDX).
 * **Quant_Correlated_Risk.py**: Cross-asset correlation and FX headwind analysis.
-* **Generate_Market_Scorecard.py**: Updates the visual dashboard hourly.
+* **Market_Pulse_Oracle.py**: Specific idiosyncratic breakout tracking (e.g., ORCL +8.91%).
 
 ### 🤖 Automation Workflow
-System updates are handled by `Auto_Mission_Sync.sh`, ensuring that the `MISSION_LOG.md` and visual assets are always synchronized.
+The `Auto_Mission_Sync.sh` daemon refreshes these visual assets every hour, ensuring the GitHub repository reflects real-time market inflections.
 </details>
 
 ---
-*Last Mission Sync: $(date '+%Y-%m-%d %H:%M') | Architecture: 6-Qubit Quantum Alpha*
+[📝 View Latest Mission Log](./MISSION_LOG.md) | *Last Mission Sync: $(date '+%Y-%m-%d %H:%M') | Architecture: 6-Qubit Quantum Alpha*
