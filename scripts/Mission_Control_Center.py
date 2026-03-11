@@ -2,7 +2,7 @@ import subprocess
 import os
 from datetime import datetime
 
-scripts = ["Generate_Market_Scorecard.py", 
+scripts = ["Quant_Correlated_Risk.py", "Generate_Market_Scorecard.py", 
     "Mission_State_Snapshot.py",
     "Omni_Alpha_Monitor.py",
     "Market_Pulse_Oracle.py",

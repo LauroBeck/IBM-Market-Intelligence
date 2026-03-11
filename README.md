@@ -27,6 +27,7 @@ A professional-grade financial visualization suite for the 2026 market environme
 * **Omni_Alpha_Monitor.py**: Detects alpha across multi-asset classes.
 * **Market_Pulse_Oracle.py**: Monitors idiosyncratic breakout signals.
 * **Sovereign_Equities_Bridge.py**: Maps FX/Equity correlation (USD-INR vs Tech).
+* **Quant_Correlated_Risk.py**: Cross-asset correlation and FX headwind analysis.
 * **Generate_Market_Scorecard.py**: Updates the visual dashboard hourly.
 
 ### 🤖 Automation Workflow
