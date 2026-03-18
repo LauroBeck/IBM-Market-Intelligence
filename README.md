@@ -1,46 +1,19 @@
-# IBM-Market-Intelligence-2026
-## Asia Intel & Sovereign Risk Engine (SRE)
+# IBM & Bloomberg Market Intelligence Dashboard
 
-[![Build](https://img.shields.io/badge/Build-Optimized--O3-green)]()
-[![Hardware](https://img.shields.io/badge/Sync-NVIDIA--Vera--Rubin-76b900)]()
-[![Market](https://img.shields.io/badge/Trigger-USDINR--93.00-red)]()
+![BLOOMBERG](https://img.shields.io/badge/BLOOMBERG-black) ![IBM](https://img.shields.io/badge/IBM-blue) ![NASDAQ](https://img.shields.io/badge/NASDAQ-black) ![PRO VERSION](https://img.shields.io/badge/PRO_VERSION-white) ![V1.0.0-PRO](https://img.shields.io/badge/V1.0.0--PRO-green) ![STATE](https://img.shields.io/badge/STATE-STABLE-green)
 
-### 🎯 Mission Objective
-A high-performance C++ monitoring suite designed to identify "Inflection Points" in the Asia-Pacific markets. Synchronized with the **March 18, 2026** Goldman Sachs GDP revision (6.5%) and the **Strait of Hormuz** energy shock.
+A professional-grade financial visualization suite for the 2026 market environment.
 
-### 🛠 Core Logic: The "Hormuz-Vera" Bridge
-- **Sovereign Alert:** Triggers a 15% portfolio rotation if **USDINR > 93.00** or **NIFTYBANK < 55,000**.
-- **Hardware Hedge:** Automatically shifts capital into **NVDA (Vera Rubin Architecture)** and **IBM (Agentic AI)** during currency de-pegging events.
+## 📊 Strategic Dashboards
 
-### 🚀 Deployment
-```bash
-g++ -O3 market_mission.cpp -o market_mission
-./market_mission
+### IBM vs Bloomberg Evolution Scorecard
+<img src="https://github.com/LauroBeck/IBM-Market-Intelligence/blob/main/Screenshot%20From%202026-03-18%2000-18-12.png?raw=true" width="800">
 
 ---
 
-## 🚀 March 18, 2026: Asia Inflection Update
-### Sovereign Risk & Quantum Stress-Testing
-Implemented native C++ BLPAPI (v3.26.1.1) integration to monitor the Goldman 6.5% GDP revision and USDINR 92.47 floor.
+## 🚀 March 18, 2026: Sovereign Risk Engine (SRE)
+Added high-performance C++ backend for real-time inflection monitoring.
 
-- **Risk Engine:** Automated pivot alerts for NIFTY BANK (55k support).
-- **Safe Haven Logic:** 15% rotation to NVDA/IBM on currency de-pegging.
-- **Quantum Frontier:** Multi-factor volatility modeling for the Hormuz energy shock.
-
-```bash
-# To run the new 2026 modules:
-g++ -O3 bloomberg_asia_intel_2026.cpp -o asia_intel
-g++ -O3 portfolio_stress_test_2026.cpp -o stress_test
-
----
-
-## 🚀 March 18, 2026: Asia Inflection Update
-### Sovereign Risk & Quantum Stress-Testing
-- **Risk Engine:** Automated pivot alerts for NIFTY BANK (55k support).
-- **Safe Haven Logic:** 15% rotation to NVDA/IBM on currency de-pegging.
-- **Quantum Frontier:** Multi-factor volatility modeling for the Hormuz energy shock.
-
-```bash
-# To run the new 2026 modules:
-g++ -O3 bloomberg_asia_intel_2026.cpp -o asia_intel
-g++ -O3 portfolio_stress_test_2026.cpp -o stress_test
+- **Market Anchor:** USDINR 92.47 / GDP 6.5% (Goldman Revision).
+- **Pivot:** NIFTY BANK 55,000 Support Logic.
+- **Hardware:** Synchronized with NVIDIA Vera Rubin (GTC 2026).
