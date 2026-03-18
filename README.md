@@ -31,3 +31,16 @@ Implemented native C++ BLPAPI (v3.26.1.1) integration to monitor the Goldman 6.5
 # To run the new 2026 modules:
 g++ -O3 bloomberg_asia_intel_2026.cpp -o asia_intel
 g++ -O3 portfolio_stress_test_2026.cpp -o stress_test
+
+---
+
+## 🚀 March 18, 2026: Asia Inflection Update
+### Sovereign Risk & Quantum Stress-Testing
+- **Risk Engine:** Automated pivot alerts for NIFTY BANK (55k support).
+- **Safe Haven Logic:** 15% rotation to NVDA/IBM on currency de-pegging.
+- **Quantum Frontier:** Multi-factor volatility modeling for the Hormuz energy shock.
+
+```bash
+# To run the new 2026 modules:
+g++ -O3 bloomberg_asia_intel_2026.cpp -o asia_intel
+g++ -O3 portfolio_stress_test_2026.cpp -o stress_test
