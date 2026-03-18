@@ -7,7 +7,7 @@ A professional-grade financial visualization suite for the 2026 market environme
 ## 📊 Strategic Dashboards
 
 ### IBM vs Bloomberg Evolution Scorecard
-<img src="https://raw.githubusercontent.com/LauroBeck/IBM-Market-Intelligence/main/Screenshot%20From%202026-03-18%2000-18-12.png" width="800">
+![IBM vs Bloomberg Scorecard](./Screenshot%20From%202026-03-18%2000-18-12.png)
 
 ---
 
